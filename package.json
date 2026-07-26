@@ -10,10 +10,10 @@
     "pnpm": ">=9.0.0"
   },
   "scripts": {
-    "build": "pnpm -r build",
-    "dev": "pnpm --parallel -r --filter './apps/frontend' --filter './apps/backend/*' --filter './agents' dev",
-    "dev:web": "pnpm --filter @delego/web dev",
-    "dev:gateway": "pnpm --filter @delego/gateway dev",
+    "build": "node init && pnpm -r build",
+    "dev": "node init && pnpm --parallel -r --filter './apps/frontend' --filter './apps/backend/*' --filter './agents' dev",
+    "dev:web": "node init && pnpm --filter @delego/web dev",
+    "dev:gateway": "node init && pnpm --filter @delego/gateway dev",
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
